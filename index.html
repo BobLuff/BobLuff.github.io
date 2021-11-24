@@ -160,6 +160,140 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/10/31/2021-10-31/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="BobLuff">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="欢乐的马">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/10/31/2021-10-31/" class="post-title-link" itemprop="url">node.js+hexo+github pages 搭建简易blog</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-10-31 20:42:39" itemprop="dateCreated datePublished" datetime="2021-10-31T20:42:39+08:00">2021-10-31</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-11-24 20:45:55" itemprop="dateModified" datetime="2021-11-24T20:45:55+08:00">2021-11-24</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%A5%BD%E7%8E%A9/" itemprop="url" rel="index"><span itemprop="name">好玩</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <blockquote>
+<p>使用hexo和github pages搭建一个简易blog系统</p>
+</blockquote>
+<h2 id="前置条件"><a href="#前置条件" class="headerlink" title="前置条件"></a>前置条件</h2><h3 id="github账号"><a href="#github账号" class="headerlink" title="github账号"></a>github账号</h3><p>首先，在github上创建一个账号，新建一个名为用户名.github.io的仓库。在设置中将它发布为github   pages。</p>
+<p>正如官网介绍，<a target="_blank" rel="noopener" href="https://pages.github.com/">GitHub Pages</a>是一个合适个人的网站（Websites for you and your projects.）。</p>
+<h3 id="node-js-hexo"><a href="#node-js-hexo" class="headerlink" title="node.js+hexo"></a>node.js+hexo</h3><h4 id="node-js和npm"><a href="#node-js和npm" class="headerlink" title="node.js和npm"></a>node.js和npm</h4><blockquote>
+<p>node.js是一个基于Chrome V8引擎的JavaScript运行环境,它是一个轻量级的Web服务器.npm(Node Package Manager)是node,js内置的一套包管理工具,我们可以使用npm自助下载依赖.</p>
+</blockquote>
+<p>安装完node.js后,使用npm安装Hexo</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>-g 表示全局安装</li>
+<li>hexo-cli  hexo Command Line Interface   hexo的命令行模式工具</li>
+</ul>
+<h4 id="Hexo介绍"><a href="#Hexo介绍" class="headerlink" title="Hexo介绍"></a>Hexo介绍</h4><blockquote>
+<p><a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/">Hexo</a>是一个静态博客生成工具,它是一个快捷简单的博客框架,具备编译MarkDown文本,转换为HTML文本,上传文件到git等功能.</p>
+</blockquote>
+<h4 id="Hexo常用方法"><a href="#Hexo常用方法" class="headerlink" title="Hexo常用方法:"></a>Hexo常用方法:</h4><ul>
+<li>创建文件</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>清除缓存</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>启动服务</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>编译文件</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>部署文件到云端</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="生成项目"><a href="#生成项目" class="headerlink" title="生成项目"></a>生成项目</h2><h3 id="新建本地hexo项目"><a href="#新建本地hexo项目" class="headerlink" title="新建本地hexo项目"></a>新建本地hexo项目</h3><p>首先.在某一空文件夹中,使用初始化命令,新建一个hexo项目.</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init</span><br></pre></td></tr></table></figure>
+
+<p><img src="/2021/10/31/2021-10-31/image-20211031202752525.png" alt="图一"></p>
+<ul>
+<li>node_modules：是依赖包</li>
+<li>public：存放的是生成的页面</li>
+<li>scaffolds：命令生成文章等的模板</li>
+<li>source：用命令创建的各种文章</li>
+<li>themes：主题</li>
+<li>_config.yml：整个博客的配置</li>
+<li>db.json：source解析所得到的</li>
+<li>package.json：项目所需模块项目的配置信息</li>
+<li>.deploy_git ： 编译后的部署文件</li>
+</ul>
+<h3 id="配置项目"><a href="#配置项目" class="headerlink" title="配置项目"></a>配置项目</h3><h3 id="部署项目"><a href="#部署项目" class="headerlink" title="部署项目"></a>部署项目</h3><h3 id="替换原生主题"><a href="#替换原生主题" class="headerlink" title="替换原生主题"></a>替换原生主题</h3><p>//todo</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://example.com/2021/10/31/Spring%E6%B3%A8%E8%A7%A3%E4%B9%8B@Profile/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -223,140 +357,6 @@
 <p>接下来就可以在需要的地方使用该代码</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Autowired</span></span><br><span class="line"><span class="keyword">private</span> DataConfig dataConfig;</span><br></pre></td></tr></table></figure>
 
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/10/31/2021.10.31/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="BobLuff">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="欢乐的马">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/10/31/2021.10.31/" class="post-title-link" itemprop="url">node.js+hexo+github pages 搭建简易blog</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-10-31 10:04:00" itemprop="dateCreated datePublished" datetime="2021-10-31T10:04:00+08:00">2021-10-31</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-11-08 22:08:58" itemprop="dateModified" datetime="2021-11-08T22:08:58+08:00">2021-11-08</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%A5%BD%E7%8E%A9/" itemprop="url" rel="index"><span itemprop="name">好玩</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <blockquote>
-<p>使用hexo和github pages搭建一个简易blog系统</p>
-</blockquote>
-<h2 id="前置条件"><a href="#前置条件" class="headerlink" title="前置条件"></a>前置条件</h2><h3 id="github账号"><a href="#github账号" class="headerlink" title="github账号"></a>github账号</h3><p>首先，在github上创建一个账号，新建一个名为用户名.github.io的仓库。在设置中将它发布为github   pages。</p>
-<p>正如官网介绍，<a target="_blank" rel="noopener" href="https://pages.github.com/">GitHub Pages</a>是一个合适个人的网站（Websites for you and your projects.）。</p>
-<h3 id="node-js-hexo"><a href="#node-js-hexo" class="headerlink" title="node.js+hexo"></a>node.js+hexo</h3><h4 id="node-js和npm"><a href="#node-js和npm" class="headerlink" title="node.js和npm"></a>node.js和npm</h4><blockquote>
-<p>node.js是一个基于Chrome V8引擎的JavaScript运行环境,它是一个轻量级的Web服务器.npm是node,js内置的一套包管理工具(Node Package Manager),我们可以使用npm自助下载依赖.</p>
-</blockquote>
-<p>安装完node.js后,使用npm安装Hexo</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>-g 表示全局安装</li>
-<li> hexo-cli  hexo Command Line Interface   hexo的命令行模式工具</li>
-</ul>
-<h4 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a>Hexo</h4><blockquote>
-<p><a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/">Hexo</a>是一个静态博客生成工具,它是一个快捷简单的博客框架,具备编译MarkDown文本,转换为HTML文本,上传文件到git等功能.</p>
-</blockquote>
-<h5 id="常用方法"><a href="#常用方法" class="headerlink" title="常用方法:"></a>常用方法:</h5><ul>
-<li>创建文件</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>清除缓存</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>启动服务</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>编译文件</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>部署文件到云端</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<h3 id=""><a href="#" class="headerlink" title=""></a></h3><h3 id="项目目录介绍"><a href="#项目目录介绍" class="headerlink" title="项目目录介绍"></a>项目目录介绍</h3><p>首先.在某一空文件夹中,使用初始化命令,新建一个hexo项目.</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init</span><br></pre></td></tr></table></figure>
-
-
-
-<p><img src="https://github.com/BobLuff/imgs/blob/main/node.hs%2Bhexo%2Bgithub%20pages%E6%90%AD%E5%BB%BA%E7%AE%80%E6%98%93blog/image-20211031202752525.png" alt="image-20211031202752525"> </p>
-<ul>
-<li>node_modules：是依赖包</li>
-<li>public：存放的是生成的页面</li>
-<li>scaffolds：命令生成文章等的模板</li>
-<li>source：用命令创建的各种文章</li>
-<li>themes：主题</li>
-<li>_config.yml：整个博客的配置</li>
-<li>db.json：source解析所得到的</li>
-<li>package.json：项目所需模块项目的配置信息</li>
-<li>.deploy_git ： 编译后的部署文件</li>
-</ul>
-<h3 id="选择合适主题"><a href="#选择合适主题" class="headerlink" title="选择合适主题"></a>选择合适主题</h3><p>//todo</p>
 
       
     </div>
