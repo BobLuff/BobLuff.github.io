@@ -17,18 +17,21 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+    var CONFIG = {"hostname":"bobluff.github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta property="og:type" content="website">
+  <meta name="description" content="记录和分享,onepiece 是我的！">
+<meta property="og:type" content="website">
 <meta property="og:title" content="欢乐的马">
-<meta property="og:url" content="http://example.com/index.html">
+<meta property="og:url" content="https://bobluff.github.io/index.html">
 <meta property="og:site_name" content="欢乐的马">
+<meta property="og:description" content="记录和分享,onepiece 是我的！">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:author" content="BobLuff">
+<meta property="article:tag" content="欢乐的马">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://example.com/">
+<link rel="canonical" href="https://bobluff.github.io/">
 
 
 <script id="page-configurations">
@@ -160,12 +163,12 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/10/31/2021-10-31/">
+    <link itemprop="mainEntityOfPage" href="https://bobluff.github.io/2021/10/31/2021-10-31/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="BobLuff">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content="记录和分享,onepiece 是我的！">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -174,7 +177,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2021/10/31/2021-10-31/" class="post-title-link" itemprop="url">node.js+hexo+github pages 搭建简易blog</a>
+            <a href="/2021/10/31/2021-10-31/" class="post-title-link" itemprop="url">使用hexo和github pages搭建一个blog系统</a>
         </h2>
 
         <div class="post-meta">
@@ -191,7 +194,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-11-24 20:45:55" itemprop="dateModified" datetime="2021-11-24T20:45:55+08:00">2021-11-24</time>
+                <time title="修改时间：2021-11-24 21:59:23" itemprop="dateModified" datetime="2021-11-24T21:59:23+08:00">2021-11-24</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -217,64 +220,145 @@
           <blockquote>
 <p>使用hexo和github pages搭建一个简易blog系统</p>
 </blockquote>
-<h2 id="前置条件"><a href="#前置条件" class="headerlink" title="前置条件"></a>前置条件</h2><h3 id="github账号"><a href="#github账号" class="headerlink" title="github账号"></a>github账号</h3><p>首先，在github上创建一个账号，新建一个名为用户名.github.io的仓库。在设置中将它发布为github   pages。</p>
-<p>正如官网介绍，<a target="_blank" rel="noopener" href="https://pages.github.com/">GitHub Pages</a>是一个合适个人的网站（Websites for you and your projects.）。</p>
-<h3 id="node-js-hexo"><a href="#node-js-hexo" class="headerlink" title="node.js+hexo"></a>node.js+hexo</h3><h4 id="node-js和npm"><a href="#node-js和npm" class="headerlink" title="node.js和npm"></a>node.js和npm</h4><blockquote>
-<p>node.js是一个基于Chrome V8引擎的JavaScript运行环境,它是一个轻量级的Web服务器.npm(Node Package Manager)是node,js内置的一套包管理工具,我们可以使用npm自助下载依赖.</p>
+<h2 id="一、前置条件"><a href="#一、前置条件" class="headerlink" title="一、前置条件"></a>一、前置条件</h2><h3 id="1-1-github账号"><a href="#1-1-github账号" class="headerlink" title="1.1 github账号"></a>1.1 github账号</h3><p>首先，在github上创建一个账号，新建一个名为<strong>用户名.github.io</strong>的仓库。</p>
+<p>在设置（setting）中将它发布为github   pages。</p>
+<p>正如官网介绍，<a target="_blank" rel="noopener" href="https://pages.github.com/">GitHub Pages</a>是一个合适个人开发者的网站（Websites for you and your projects.）。</p>
+<h3 id="1-2-node-js-hexo"><a href="#1-2-node-js-hexo" class="headerlink" title="1.2 node.js+hexo"></a>1.2 node.js+hexo</h3><h4 id="1）node-js和npm"><a href="#1）node-js和npm" class="headerlink" title="1）node.js和npm"></a>1）node.js和npm</h4><blockquote>
+<p>node.js是一个基于Chrome V8引擎的JavaScript运行环境,它是一个轻量级的Web服务器。npm(Node Package Manager)是node,js内置的一套包管理工具,我们可以使用npm自助下载依赖.</p>
 </blockquote>
-<p>安装完node.js后,使用npm安装Hexo</p>
+<p>安装完node.js后,使用npm命令安装Hexo</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
 
 <ul>
 <li>-g 表示全局安装</li>
 <li>hexo-cli  hexo Command Line Interface   hexo的命令行模式工具</li>
 </ul>
-<h4 id="Hexo介绍"><a href="#Hexo介绍" class="headerlink" title="Hexo介绍"></a>Hexo介绍</h4><blockquote>
+<h4 id="2）Hexo介绍"><a href="#2）Hexo介绍" class="headerlink" title="2）Hexo介绍"></a>2）Hexo介绍</h4><blockquote>
 <p><a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/">Hexo</a>是一个静态博客生成工具,它是一个快捷简单的博客框架,具备编译MarkDown文本,转换为HTML文本,上传文件到git等功能.</p>
 </blockquote>
-<h4 id="Hexo常用方法"><a href="#Hexo常用方法" class="headerlink" title="Hexo常用方法:"></a>Hexo常用方法:</h4><ul>
-<li>创建文件</li>
+<h4 id="3）Hexo常用方法"><a href="#3）Hexo常用方法" class="headerlink" title="3）Hexo常用方法:"></a>3）Hexo常用方法:</h4><ul>
+<li>查看已安装模块版本</li>
 </ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo -v</span><br></pre></td></tr></table></figure>
 
 <ul>
-<li>清除缓存</li>
+<li>创建一篇文章</li>
 </ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>启动服务</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>编译文件</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>部署文件到云端</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new <span class="string">&quot;My New Post&quot;</span>       </span><br></pre></td></tr></table></figure>
 
 
 
-<h2 id="生成项目"><a href="#生成项目" class="headerlink" title="生成项目"></a>生成项目</h2><h3 id="新建本地hexo项目"><a href="#新建本地hexo项目" class="headerlink" title="新建本地hexo项目"></a>新建本地hexo项目</h3><p>首先.在某一空文件夹中,使用初始化命令,新建一个hexo项目.</p>
+<h2 id="二、搭建blog项目"><a href="#二、搭建blog项目" class="headerlink" title="二、搭建blog项目"></a>二、搭建blog项目</h2><h3 id="2-1-新建本地hexo项目"><a href="#2-1-新建本地hexo项目" class="headerlink" title="2.1 新建本地hexo项目"></a>2.1 新建本地hexo项目</h3><p>首先.在某一空文件夹中,调出命令行串口，输入如下命令，初始化项目，搭建hexo站点</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init</span><br></pre></td></tr></table></figure>
 
 <p><img src="/2021/10/31/2021-10-31/image-20211031202752525.png" alt="图一"></p>
 <ul>
-<li>node_modules：是依赖包</li>
+<li>node_modules：依赖包文件夹</li>
 <li>public：存放的是生成的页面</li>
 <li>scaffolds：命令生成文章等的模板</li>
-<li>source：用命令创建的各种文章</li>
-<li>themes：主题</li>
+<li>source：用命令创建的各种文章，我们编写的markdown文件即存放在该目录</li>
+<li>themes：主题，blog的样式，可从网上下载自定义样式</li>
 <li>_config.yml：整个博客的配置</li>
 <li>db.json：source解析所得到的</li>
 <li>package.json：项目所需模块项目的配置信息</li>
 <li>.deploy_git ： 编译后的部署文件</li>
 </ul>
-<h3 id="配置项目"><a href="#配置项目" class="headerlink" title="配置项目"></a>配置项目</h3><h3 id="部署项目"><a href="#部署项目" class="headerlink" title="部署项目"></a>部署项目</h3><h3 id="替换原生主题"><a href="#替换原生主题" class="headerlink" title="替换原生主题"></a>替换原生主题</h3><p>//todo</p>
+<h3 id="2-2-配置项目"><a href="#2-2-配置项目" class="headerlink" title="2.2 配置项目"></a>2.2 配置项目</h3><p>项目根目录中的_config.yml文件主要用来配置博客的各类样式，如菜单栏、标签页等。</p>
+<h4 id="1）设置github地址"><a href="#1）设置github地址" class="headerlink" title="1）设置github地址"></a>1）设置github地址</h4><p>在deploy中配置需要发布的github地址</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span>  </span><br><span class="line">  <span class="attr">repo:</span> <span class="string">https://github.com/BobLuff/BobLuff.github.io</span>   <span class="comment"># 发布地址</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">main</span>  <span class="comment"># 主分支</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="2）其他配置"><a href="#2）其他配置" class="headerlink" title="2）其他配置"></a>2）其他配置</h4><table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>title</code></td>
+<td align="left">网站标题</td>
+</tr>
+<tr>
+<td align="left"><code>subtitle</code></td>
+<td align="left">网站副标题</td>
+</tr>
+<tr>
+<td align="left"><code>description</code></td>
+<td align="left">网站描述</td>
+</tr>
+<tr>
+<td align="left"><code>keywords</code></td>
+<td align="left">网站的关键词。支持多个关键词。</td>
+</tr>
+<tr>
+<td align="left"><code>author</code></td>
+<td align="left">您的名字</td>
+</tr>
+<tr>
+<td align="left"><code>language</code></td>
+<td align="left">网站使用的语言。对于简体中文用户来说，使用不同的主题可能需要设置成不同的值，请参考你的主题的文档自行设置，常见的有 <code>zh-Hans</code>和 <code>zh-CN</code>。</td>
+</tr>
+<tr>
+<td align="left"><code>timezone</code></td>
+<td align="left">网站时区。Hexo 默认使用您电脑的时区。请参考 <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/List_of_tz_database_time_zones">时区列表</a> 进行设置，如 <code>America/New_York</code>, <code>Japan</code>, 和 <code>UTC</code> 。一般的，对于中国大陆地区可以使用 <code>Asia/Shanghai</code>。</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>具体配置请参考hexo官方文档（<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/configuration.html">配置 | Hexo</a>）</p>
+</blockquote>
+<h3 id="2-3-部署项目"><a href="#2-3-部署项目" class="headerlink" title="2.3 部署项目"></a>2.3 部署项目</h3><p>在项目根目录中打开命令行窗口，输入如下命令</p>
+<p>1） 清除缓存</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean                         </span><br></pre></td></tr></table></figure>
+
+<p>2）编译文件。生成网站相关文件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo generate   <span class="comment"># 缩写为 hexo g</span></span><br></pre></td></tr></table></figure>
+
+<p>3）启动本地服务</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server       <span class="comment"># 缩写为 hexo s</span></span><br></pre></td></tr></table></figure>
+
+<p>启动完服务后，在浏览器中输入<a target="_blank" rel="noopener" href="http://localhost:4000/%EF%BC%8C%E5%B0%B1%E5%8F%AF%E4%BB%A5%E6%9F%A5%E7%9C%8B%E5%88%B0%E6%90%AD%E5%BB%BA%E7%9A%84%E5%8D%9A%E5%AE%A2%E4%BA%86%E3%80%82">http://localhost:4000/，就可以查看到搭建的博客了。</a></p>
+<p>4）部署文件到云端</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo deploy     <span class="comment"># 缩写为 hexo d</span></span><br></pre></td></tr></table></figure>
+
+<p>因为前面配置了使用git推送项目，在push时，是需要输入github账号密码的。</p>
+<h3 id="2-4-替换原生主题"><a href="#2-4-替换原生主题" class="headerlink" title="2.4 替换原生主题"></a>2.4 替换原生主题</h3><p>主题就是blog的样式。在网上可以搜索到各种类型的主题样式，hexo也提供的可供下载的主题（<a target="_blank" rel="noopener" href="https://hexo.io/themes/index.html">Themes | Hexo</a>）。</p>
+<p>相较于其他主题，next主题较为简洁，下文将以next主题举例说明配置方法.</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://theme-next.iissnan.com/getting-started.html">开始使用 - NexT 使用文档 (iissnan.com)</a></p>
+</blockquote>
+<h4 id="1）下载主题"><a href="#1）下载主题" class="headerlink" title="1）下载主题"></a>1）下载主题</h4><p>在hexo站点目录中，使用git下载next主题</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/iissnan/hexo-theme-next themes/next</span><br></pre></td></tr></table></figure>
+
+<h4 id="2）配置主题"><a href="#2）配置主题" class="headerlink" title="2）配置主题"></a>2）配置主题</h4><p>在根目录的_config.yml中，启用next主题</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Extensions</span></span><br><span class="line"><span class="comment">## Plugins: https://hexo.io/plugins/</span></span><br><span class="line"><span class="comment">## Themes: https://hexo.io/themes/</span></span><br><span class="line"><span class="attr">theme:</span> <span class="string">next</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p>在路径<strong>themes/next/_config.yml</strong>中可配置next主题需要显示的样式。</p>
+<p>常用的样式如下：</p>
+<ul>
+<li>设置页面主题风格</li>
+</ul>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#scheme: Muse</span></span><br><span class="line"><span class="comment">#scheme: Mist</span></span><br><span class="line"><span class="attr">scheme:</span> <span class="string">Pisces</span></span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li>设置菜单栏</li>
+</ul>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">menu:</span></span><br><span class="line">  <span class="attr">home:</span> <span class="string">/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-home</span></span><br><span class="line">  <span class="attr">archives:</span> <span class="string">/archives/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-archive</span></span><br><span class="line">  <span class="attr">categories:</span> <span class="string">/categories/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-th</span></span><br><span class="line">  <span class="attr">tags:</span> <span class="string">/tags/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-tags</span></span><br><span class="line">  <span class="attr">about:</span> <span class="string">/about/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-user</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">#schedule: /schedule/ || fa fa-calendar</span></span><br><span class="line">  <span class="comment">#sitemap: /sitemap.xml || fa fa-sitemap</span></span><br><span class="line">  <span class="comment">#commonweal: /404/ || fa fa-heartbeat</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li>设置文章目录结构</li>
+</ul>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">toc:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span> <span class="comment"># 自动添加目录</span></span><br><span class="line">  <span class="attr">number:</span> <span class="literal">false</span>  <span class="comment">#是否自动添加标题编号 </span></span><br><span class="line">  <span class="attr">wrap:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">expand_all:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">max_depth:</span> <span class="number">6</span></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+
+
 
       
     </div>
@@ -294,12 +378,12 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/10/31/Spring%E6%B3%A8%E8%A7%A3%E4%B9%8B@Profile/">
+    <link itemprop="mainEntityOfPage" href="https://bobluff.github.io/2021/10/31/Spring%E6%B3%A8%E8%A7%A3%E4%B9%8B@Profile/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="BobLuff">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content="记录和分享,onepiece 是我的！">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -431,7 +515,7 @@
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
   <p class="site-author-name" itemprop="name">BobLuff</p>
-  <div class="site-description" itemprop="description"></div>
+  <div class="site-description" itemprop="description">记录和分享,onepiece 是我的！</div>
 </div>
 <div class="site-state-wrap motion-element">
   <nav class="site-state">
