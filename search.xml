@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>node.js+hexo+github pages 搭建简易blog</title>
+    <url>/2021/10/31/2021.10.31/</url>
+    <content><![CDATA[<blockquote>
+<p>使用hexo和github pages搭建一个简易blog系统</p>
+</blockquote>
+<h2 id="前置条件"><a href="#前置条件" class="headerlink" title="前置条件"></a>前置条件</h2><h3 id="github账号"><a href="#github账号" class="headerlink" title="github账号"></a>github账号</h3><p>首先，在github上创建一个账号，新建一个名为用户名.github.io的仓库。在设置中将它发布为github   pages。</p>
+<p>正如官网介绍，<a href="https://pages.github.com/">GitHub Pages</a>是一个合适个人的网站（Websites for you and your projects.）。</p>
+<h3 id="node-js-hexo"><a href="#node-js-hexo" class="headerlink" title="node.js+hexo"></a>node.js+hexo</h3><h4 id="node-js和npm"><a href="#node-js和npm" class="headerlink" title="node.js和npm"></a>node.js和npm</h4><blockquote>
+<p>node.js是一个基于Chrome V8引擎的JavaScript运行环境,它是一个轻量级的Web服务器.npm(Node Package Manager)是node,js内置的一套包管理工具,我们可以使用npm自助下载依赖.</p>
+</blockquote>
+<p>安装完node.js后,使用npm安装Hexo</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>-g 表示全局安装</li>
+<li> hexo-cli  hexo Command Line Interface   hexo的命令行模式工具</li>
+</ul>
+<h4 id="Hexo介绍"><a href="#Hexo介绍" class="headerlink" title="Hexo介绍"></a>Hexo介绍</h4><blockquote>
+<p><a href="https://hexo.io/zh-cn/docs/">Hexo</a>是一个静态博客生成工具,它是一个快捷简单的博客框架,具备编译MarkDown文本,转换为HTML文本,上传文件到git等功能.</p>
+</blockquote>
+<h4 id="Hexo常用方法"><a href="#Hexo常用方法" class="headerlink" title="Hexo常用方法:"></a>Hexo常用方法:</h4><ul>
+<li>创建文件</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>清除缓存</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo clean</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>启动服务</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>编译文件</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>部署文件到云端</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="生成项目"><a href="#生成项目" class="headerlink" title="生成项目"></a>生成项目</h2><h3 id="新建本地hexo项目"><a href="#新建本地hexo项目" class="headerlink" title="新建本地hexo项目"></a>新建本地hexo项目</h3><p>首先.在某一空文件夹中,使用初始化命令,新建一个hexo项目.</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">hexo init</span><br></pre></td></tr></table></figure>
+
+
+
+<p><img src="https://github.com/BobLuff/imgs/blob/main/node.hs%2Bhexo%2Bgithub%20pages%E6%90%AD%E5%BB%BA%E7%AE%80%E6%98%93blog/image-20211031202752525.png" alt="image-20211031202752525"> </p>
+<ul>
+<li>node_modules：是依赖包</li>
+<li>public：存放的是生成的页面</li>
+<li>scaffolds：命令生成文章等的模板</li>
+<li>source：用命令创建的各种文章</li>
+<li>themes：主题</li>
+<li>_config.yml：整个博客的配置</li>
+<li>db.json：source解析所得到的</li>
+<li>package.json：项目所需模块项目的配置信息</li>
+<li>.deploy_git ： 编译后的部署文件</li>
+</ul>
+<h3 id="配置项目"><a href="#配置项目" class="headerlink" title="配置项目"></a>配置项目</h3><h3 id="部署项目"><a href="#部署项目" class="headerlink" title="部署项目"></a>部署项目</h3><h3 id="替换原生主题"><a href="#替换原生主题" class="headerlink" title="替换原生主题"></a>替换原生主题</h3><p>//todo</p>
+]]></content>
+      <categories>
+        <category>好玩</category>
+      </categories>
+      <tags>
+        <tag>其他</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Spring中多语言页面适配方案总结</title>
+    <url>/2022/01/28/20220128/</url>
+    <content><![CDATA[<h2 id="一、概述"><a href="#一、概述" class="headerlink" title="一、概述"></a>一、概述</h2><p>在做web开发中，考虑到地区语言习惯，常常需要根据不同国家/地区显示不同的语言。在笔者接触的项目中，需要对多种语言类型进行适配，但在实际预研和项目开发过程中，逐渐了解到不同语言的阅读、书写方式差异大。</p>
+<p>不同的语言的读写习惯、字体大小会导致页面有不同的排版样式，难以做到一视同仁。例如英语和现代汉语读写顺序相同，都是从左往右读；少数民族语言维语等阿拉伯语言是从右往左读写；蒙文、古汉语等语言是从上往下读写。一句话在不同语言中字符长度不同，这也是前端显示时需要考虑的问题。</p>
+<table>
+<thead>
+<tr>
+<th>语言类型</th>
+<th>示例</th>
+<th>读写习惯</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>中文（zh_CN）</td>
+<td>这是中文</td>
+<td>从左往右读写</td>
+</tr>
+<tr>
+<td>英文（en）</td>
+<td>this is English</td>
+<td>从左往右读写</td>
+</tr>
+<tr>
+<td>蒙古语（mn_MN）</td>
+<td>见下图</td>
+<td>竖排从上到下，列序从左到右</td>
+</tr>
+<tr>
+<td>维吾尔语（ug_CN）</td>
+<td>بۇ ئۇيغۇر</td>
+<td>从右往左读写</td>
+</tr>
+</tbody></table>
+<span id="more"></span>
+
+
+
+
+
+<p><img src="/2022/01/28/20220128/image-20220128145342944.png" alt="图一"></p>
+<p>​                                                                                                            图一、蒙古文示例 </p>
+<p>笔者总结网上文章和自身项目经验，将多语言方法为两类方法：替换法和多套页面法。其中替换法包括前端页面文本替换、读取properties配置文件替换、读取json配置文件替换（部分客户端游戏使用该方法做多语言适配，因笔者接触较少，故不讨论）等。</p>
+<h2 id="二、替换法"><a href="#二、替换法" class="headerlink" title="二、替换法"></a>二、替换法</h2><p>替换法是指通过代码动态获取不同语言文本，当前页面显示什么语言类型就显示哪种语言。该方法比较适用读写顺序相同，切换不同语言后不影响整体页面布局的多语言类型。该方法常见中英文适配。</p>
+<h3 id="2-1-jQuery-i18n插件法"><a href="#2-1-jQuery-i18n插件法" class="headerlink" title="2.1 jQuery  i18n插件法"></a>2.1 jQuery  i18n插件法</h3><h4 id="2-1-1-简介"><a href="#2-1-1-简介" class="headerlink" title="2.1.1 简介"></a>2.1.1 简介</h4><p>jQuery.i18n.properties是jQuery的插件，该方法需和jQuery配套使用。它的原理是在html中，对需要翻译的文本进行标记，然后调用相关js代码，传入当前页面的语言类型，读取对应propertis中的翻译文本再替换，类似的还有vue中的i18n插件等。</p>
+<p>jQuery.18n.properties的github下载地址：<a href="https://github.com/jquery-i18n-properties/jquery-i18n-properties">https://github.com/jquery-i18n-properties/jquery-i18n-properties</a></p>
+<h4 id="2-1-2-使用方法"><a href="#2-1-2-使用方法" class="headerlink" title="2.1.2 使用方法"></a>2.1.2 使用方法</h4><p>1）演示代码插件版本</p>
+<ul>
+<li>jquery-3.0.0.min.js</li>
+<li>jquery.i18n.properties-1.0.9.js</li>
+</ul>
+<p>2）在对应properties文件中配置多语言值</p>
+<p>properties文件名称需要和name传入的值保持一致，文件名命名规则为<strong>name_语言类型.properties</strong>，例如，strings_en.properties。</p>
+<p>strings_zh_CN.properties:</p>
+<figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">key</span>=<span class="string">这是中文</span></span><br></pre></td></tr></table></figure>
+
+<p>strings_en.properties：</p>
+<figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">key</span>=<span class="string">this is english</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+<p>3）演示代码</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;zh-CN&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;keywords&quot;</span> <span class="attr">content</span>=<span class="string">&quot;&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;description&quot;</span> <span class="attr">content</span>=<span class="string">&quot;&quot;</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">select</span> <span class="attr">id</span>=<span class="string">&quot;language&quot;</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">&quot;zh_CN&quot;</span>&gt;</span>中文简体<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">&quot;en&quot;</span>&gt;</span>English<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">br</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">hr</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span> <span class="attr">data-locale</span>=<span class="string">&quot;key&quot;</span>&gt;</span>默认文本<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;js/jquery-3.0.0.min.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 加载语言包文件 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;js/jquery.i18n.properties-1.0.9.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></span><br><span class="line"><span class="javascript">    <span class="keyword">var</span> changeLanguage = <span class="function"><span class="keyword">function</span>(<span class="params">i18nLanguage</span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">        jQuery.i18n.properties(&#123;</span></span><br><span class="line"><span class="javascript">            <span class="attr">name</span>: <span class="string">&quot;strings&quot;</span>, <span class="comment">//资源文件名称</span></span></span><br><span class="line"><span class="javascript">            <span class="attr">path</span>: <span class="string">&quot;./i18n/&quot;</span>, <span class="comment">//资源文件路径</span></span></span><br><span class="line"><span class="javascript">            <span class="attr">mode</span>: <span class="string">&quot;map&quot;</span>, <span class="comment">//用Map的方式使用资源文件中的值</span></span></span><br><span class="line"><span class="javascript">            <span class="attr">language</span>: i18nLanguage,</span></span><br><span class="line"><span class="javascript">            <span class="attr">encoding</span>: <span class="string">&quot;UTF-8&quot;</span>,</span></span><br><span class="line"><span class="javascript">            <span class="attr">callback</span>: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">                <span class="comment">//加载成功后设置显示内容</span></span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript">                $(<span class="string">&quot;[data-locale]&quot;</span>).each(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">                    <span class="comment">// 根据i18n元素的 name 获取内容写入</span></span></span><br><span class="line"><span class="javascript">                    $(<span class="built_in">this</span>).html($.i18n.prop($(<span class="built_in">this</span>).attr(<span class="string">&quot;data-locale&quot;</span>)));</span></span><br><span class="line"><span class="javascript">                &#125;);</span></span><br><span class="line"><span class="javascript">            &#125;,</span></span><br><span class="line"><span class="javascript">        &#125;);</span></span><br><span class="line"><span class="javascript">    &#125;;</span></span><br><span class="line"><span class="javascript">    $(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">        $(<span class="string">&quot;#language&quot;</span>).change(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">            <span class="keyword">var</span> lang = $(<span class="string">&quot;#language&quot;</span>).val();</span></span><br><span class="line"><span class="javascript">            <span class="built_in">console</span>.log(lang);</span></span><br><span class="line"><span class="javascript">            changeLanguage(lang);</span></span><br><span class="line"><span class="javascript">        &#125;);</span></span><br><span class="line"><span class="javascript">    &#125;);</span></span><br><span class="line"><span class="javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h4 id="2-1-3-注意要点"><a href="#2-1-3-注意要点" class="headerlink" title="2.1.3 注意要点"></a>2.1.3 注意要点</h4><p>该方法是在前端对一些静态文本进行替换，方法较为简单。如果需要和实际项目结合，考虑的重点可能是怎么获取当前页面的语言类型，可以从url中locale参数、或后端传参到前端等方面去考虑，本文暂不展开讨论。该方法的优点是一套页面适配多种语言，缺点是该方法不适合语言书写习惯差异大的语言。</p>
+<h3 id="2-2-ResourceBundle法"><a href="#2-2-ResourceBundle法" class="headerlink" title="2.2 ResourceBundle法"></a>2.2 ResourceBundle法</h3><p>该方法是使用ResourceBundle来加载properties配置文件中的值，然后再将读取的值返回给前端页面，完成页面的显示工作。</p>
+<p>配置文件如图：</p>
+<p><img src="/2022/01/28/20220128/image-20220125102755145.png" alt="image-20220125102755145">   </p>
+<p>定义LocaleResource文件存储配置文件</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@PropertySource(value = &#123;&quot;classpath:i18n/strings*.properties&quot;&#125;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LocaleResource</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> Map&lt;String, ResourceBundle&gt; MESSAGES = <span class="keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> String <span class="title">getMessage</span><span class="params">(String key, Object... params)</span> </span>&#123;</span><br><span class="line">        </span><br><span class="line">        <span class="comment">//根据当前请求的语言类型，读取当前</span></span><br><span class="line">        Locale locale = LocaleContextHolder.getLocale();</span><br><span class="line">        ResourceBundle message = MESSAGES.get(locale.getLanguage());</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (<span class="keyword">null</span> == message) &#123;</span><br><span class="line">            <span class="keyword">synchronized</span> (MESSAGES) &#123;</span><br><span class="line">                message = MESSAGES.get(locale.getLanguage());</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">                <span class="keyword">if</span> (<span class="keyword">null</span> == message) &#123;</span><br><span class="line">                    message = ResourceBundle.getBundle(<span class="string">&quot;i18n/messages&quot;</span>, locale);</span><br><span class="line">                    MESSAGES.put(locale.getLanguage(), message);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (<span class="keyword">null</span> != params) &#123;</span><br><span class="line">            <span class="keyword">return</span> String.format(message.getString(key), params);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> message.getString(key);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">flushMessage</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        MESSAGES.clear();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>controller层中调用方法：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">String test = LocaleResource.getMessage(<span class="string">&quot;test&quot;</span>);</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+<h3 id="2-2-MessageSource法"><a href="#2-2-MessageSource法" class="headerlink" title="2.2 MessageSource法"></a>2.2 MessageSource法</h3><p>MessageSource是Spring中定义的一个支持国际化的接口，使用比较简单。Message是在ResoucreBundle上的简化操作。</p>
+<p>首先在application.yaml中配置读取多语言配置文件的路径，然后创建对应的多语言配置文件。</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">messages:</span></span><br><span class="line">    <span class="attr">basename:</span> <span class="string">i18n/strings</span></span><br><span class="line">    <span class="attr">encoding:</span> <span class="string">UTF-8</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="/2022/01/28/20220128/image-20220125102755145.png" alt="image-20220125102755145"> </p>
+<p>创建工具类：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Component</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MessageSourceUtils</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">private</span> MessageSource messageSource;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getMessage</span><span class="params">(String code)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> getMessage(code, <span class="keyword">null</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getMessage</span><span class="params">(String code, Object[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> getMessage(code, args, <span class="keyword">null</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getMessage</span><span class="params">(String code, Object[] args, String defaultMsg)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//设置读取的语言类型，本案例中从http请求中获取</span></span><br><span class="line">        Locale locale= LocaleContextHolder.getLocale();</span><br><span class="line">        <span class="keyword">return</span> messageSource.getMessage(code, args, defaultMsg, locale);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>调用方法：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">String test = messageSourceUtils.getMessage(<span class="string">&quot;test&quot;</span>);</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h2 id="三、多套页面法"><a href="#三、多套页面法" class="headerlink" title="三、多套页面法"></a>三、多套页面法</h2><p>顾名思义，该方法是一种语言类型对应一套html页面，通过控制页面访问路径来跳转到正确页面。该方法只需要在获取到当前语言类型后，通过设置不同的url，来保证跳转到对应页面即可。</p>
+<p>文件路径截图如下</p>
+<p><img src="/2022/01/28/20220128/image-20220128142522097.png" alt="image-20220128142522097"> </p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@GetMapping(&quot;/index3&quot;)</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> String <span class="title">testMult</span><span class="params">(HttpServletRequest request)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//本方法不唯一，语言类型的获取可通过设置url请求参数等方式设置</span></span><br><span class="line">    String lang  = LocaleContextHolder.getLocale().toString();</span><br><span class="line">    <span class="comment">// 映射到 src/main/resources/templates/语言/xxxx.html</span></span><br><span class="line">    <span class="keyword">return</span> lang+<span class="string">&quot;/hello&quot;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h2 id="五、总结"><a href="#五、总结" class="headerlink" title="五、总结"></a>五、总结</h2><p>每种多语言适配方法各有利弊，具体需要根据项目实际场景而定。</p>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>优点</th>
+<th>缺点</th>
+<th>适用场景</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>替换法</td>
+<td>一套代码，便于维护</td>
+<td>当页面文本元素过多，不利于页面数据的维护和管理</td>
+<td>当几种语言的书写习惯，字符占位差别不大，语言切换不会影响页面整体布局时，比较适用，如中英文切换</td>
+</tr>
+<tr>
+<td>多套页面法</td>
+<td>可根据语言类型定制页面样式</td>
+<td>多套页面，不利于代码维护；开发和维护过程比较耗时耗力</td>
+<td>当语言书写习惯差别较大时，需要根据语言的书写、阅读习惯做定制化设计是，该方法比较适用，如中文和维文、哈文等少数民族语言切换时</td>
+</tr>
+</tbody></table>
+<p>类似ResourceBundle、MessageSource等替换法，在进行一些关键报错信息时，是比较可行的方法。如果对页面中大量的文本进行替换，这又会涉及到数据加载和页面渲染时间过慢的问题，也是后续运行中需要考虑的因素。</p>
+<p>多套页面相对简单，但维护麻烦，一个页面有bug，可能多个页面都有bug。</p>
+<p>总之，两类方法各有利弊，开发过程中需在实际了解项目需求后，再选择合适方法。</p>
+<h2 id="六、参考资料"><a href="#六、参考资料" class="headerlink" title="六、参考资料"></a>六、参考资料</h2><ul>
+<li><p><a href="https://geek-docs.com/spring/spring-tutorials/messagesource.html">https://geek-docs.com/spring/spring-tutorials/messagesource.html</a></p>
+</li>
+<li><p><a href="https://www.cnblogs.com/biehongli/p/13873939.html">https://www.cnblogs.com/biehongli/p/13873939.html</a></p>
+</li>
+<li><p><a href="https://www.cnblogs.com/loveLands/articles/9859109.html">https://www.cnblogs.com/loveLands/articles/9859109.html</a></p>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>spring知识</category>
+      </categories>
+      <tags>
+        <tag>spring</tag>
+        <tag>web</tag>
+        <tag>多语言</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Spring注解之@Profile</title>
+    <url>/2021/10/31/Spring%E6%B3%A8%E8%A7%A3%E4%B9%8B@Profile/</url>
+    <content><![CDATA[<h2 id="Spring注解之-Profile"><a href="#Spring注解之-Profile" class="headerlink" title="Spring注解之@Profile"></a>Spring注解之@Profile</h2><p>spring的Profile是一种环境级别（dev、test、prod）的参数控制手段，只有当profile中的配置被激活时，才将对应的Bean注册到Spring容器中，常用来配置不通环境的数据库读取方式。一般，使用<strong>spring.profiles.active</strong> 设置当前启动环境。</p>
+<h2 id="示例一-读取不同环境的变量"><a href="#示例一-读取不同环境的变量" class="headerlink" title="示例一 读取不同环境的变量"></a>示例一 读取不同环境的变量</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">DataConfig</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getValue</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<span id="more"></span>
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Profile(&quot;dev&quot;)</span></span><br><span class="line"><span class="meta">@Service</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">DataConfigDev</span> <span class="keyword">implements</span> <span class="title">DataConfig</span> </span>&#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="meta">@Value(&quot;$&#123;data&#125;&quot;)</span></span><br><span class="line">    <span class="keyword">private</span> String value;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getValue</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> value;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Profile(&quot;test&quot;)</span></span><br><span class="line"><span class="meta">@Service</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">DataConfigTest</span> <span class="keyword">implements</span> <span class="title">DataConfig</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Value(&quot;$&#123;data&#125;&quot;)</span></span><br><span class="line">    <span class="keyword">private</span> String value;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getValue</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> value;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>注意，profile可传多个参数</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Profile(&#123;&quot;dev&quot;,&quot;test&quot;&#125;)</span></span><br></pre></td></tr></table></figure>
+
+<p>接下来就可以在需要的地方使用该代码</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Autowired</span></span><br><span class="line"><span class="keyword">private</span> DataConfig dataConfig;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>spring知识</category>
+      </categories>
+      <tags>
+        <tag>spring</tag>
+        <tag>注解</tag>
+      </tags>
+  </entry>
+</search>
