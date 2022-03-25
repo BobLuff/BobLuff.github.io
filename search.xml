@@ -161,6 +161,80 @@
       </tags>
   </entry>
   <entry>
+    <title>node.js+hexo+github pages 搭建简易blog</title>
+    <url>/2021/10/31/2021.10.31/</url>
+    <content><![CDATA[<blockquote>
+<p>使用hexo和github pages搭建一个简易blog系统</p>
+</blockquote>
+<h2 id="前置条件"><a href="#前置条件" class="headerlink" title="前置条件"></a>前置条件</h2><h3 id="github账号"><a href="#github账号" class="headerlink" title="github账号"></a>github账号</h3><p>首先，在github上创建一个账号，新建一个名为用户名.github.io的仓库。在设置中将它发布为github   pages。</p>
+<p>正如官网介绍，<a href="https://pages.github.com/">GitHub Pages</a>是一个合适个人的网站（Websites for you and your projects.）。</p>
+<h3 id="node-js-hexo"><a href="#node-js-hexo" class="headerlink" title="node.js+hexo"></a>node.js+hexo</h3><h4 id="node-js和npm"><a href="#node-js和npm" class="headerlink" title="node.js和npm"></a>node.js和npm</h4><blockquote>
+<p>node.js是一个基于Chrome V8引擎的JavaScript运行环境,它是一个轻量级的Web服务器.npm(Node Package Manager)是node,js内置的一套包管理工具,我们可以使用npm自助下载依赖.</p>
+</blockquote>
+<p>安装完node.js后,使用npm安装Hexo</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>-g 表示全局安装</li>
+<li> hexo-cli  hexo Command Line Interface   hexo的命令行模式工具</li>
+</ul>
+<h4 id="Hexo介绍"><a href="#Hexo介绍" class="headerlink" title="Hexo介绍"></a>Hexo介绍</h4><blockquote>
+<p><a href="https://hexo.io/zh-cn/docs/">Hexo</a>是一个静态博客生成工具,它是一个快捷简单的博客框架,具备编译MarkDown文本,转换为HTML文本,上传文件到git等功能.</p>
+</blockquote>
+<h4 id="Hexo常用方法"><a href="#Hexo常用方法" class="headerlink" title="Hexo常用方法:"></a>Hexo常用方法:</h4><ul>
+<li>创建文件</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>清除缓存</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo clean</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>启动服务</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>编译文件</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>部署文件到云端</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="生成项目"><a href="#生成项目" class="headerlink" title="生成项目"></a>生成项目</h2><h3 id="新建本地hexo项目"><a href="#新建本地hexo项目" class="headerlink" title="新建本地hexo项目"></a>新建本地hexo项目</h3><p>首先.在某一空文件夹中,使用初始化命令,新建一个hexo项目.</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">hexo init</span><br></pre></td></tr></table></figure>
+
+
+
+<p><img src="https://github.com/BobLuff/imgs/blob/main/node.hs%2Bhexo%2Bgithub%20pages%E6%90%AD%E5%BB%BA%E7%AE%80%E6%98%93blog/image-20211031202752525.png" alt="image-20211031202752525"> </p>
+<ul>
+<li>node_modules：是依赖包</li>
+<li>public：存放的是生成的页面</li>
+<li>scaffolds：命令生成文章等的模板</li>
+<li>source：用命令创建的各种文章</li>
+<li>themes：主题</li>
+<li>_config.yml：整个博客的配置</li>
+<li>db.json：source解析所得到的</li>
+<li>package.json：项目所需模块项目的配置信息</li>
+<li>.deploy_git ： 编译后的部署文件</li>
+</ul>
+<h3 id="配置项目"><a href="#配置项目" class="headerlink" title="配置项目"></a>配置项目</h3><h3 id="部署项目"><a href="#部署项目" class="headerlink" title="部署项目"></a>部署项目</h3><h3 id="替换原生主题"><a href="#替换原生主题" class="headerlink" title="替换原生主题"></a>替换原生主题</h3><p>//todo</p>
+]]></content>
+      <categories>
+        <category>好玩</category>
+      </categories>
+      <tags>
+        <tag>其他</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Spring中多语言页面适配方案总结</title>
     <url>/2022/01/28/20220128/</url>
     <content><![CDATA[<h2 id="一、概述"><a href="#一、概述" class="headerlink" title="一、概述"></a>一、概述</h2><p>在做web开发中，考虑到地区语言习惯，常常需要根据不同国家/地区显示不同的语言。在笔者接触的项目中，需要对多种语言类型进行适配，但在实际预研和项目开发过程中，逐渐了解到不同语言的阅读、书写方式差异大。</p>
@@ -320,9 +394,127 @@
       </tags>
   </entry>
   <entry>
+    <title>MySQL中存储过程的简单使用</title>
+    <url>/2022/03/25/20220325/</url>
+    <content><![CDATA[<h1 id="一、存储过程简介"><a href="#一、存储过程简介" class="headerlink" title="一、存储过程简介"></a>一、存储过程简介</h1><h2 id="1-1-什么是存储过程"><a href="#1-1-什么是存储过程" class="headerlink" title="1.1 什么是存储过程"></a>1.1 什么是存储过程</h2><p>存储过程（Stored Procedure）是一种在数据库中存储复杂程序，以便外部程序调用的一种数据库对象。</p>
+<p>存储过程是为了完成特定功能的一组SQL语句集合，包含数据类型、流程控制、输入和输出和它自己的函数库，编译后保存在数据库中，用户可随时调用它。</p>
+<h2 id="1-2-为什么要用存储过程"><a href="#1-2-为什么要用存储过程" class="headerlink" title="1.2 为什么要用存储过程"></a>1.2 为什么要用存储过程</h2><p>存储过程将sql处理操作封装在一个简单的处理单元中，存储数据库中，便于反复调用，在一定程度上能增加数据的处理效率，同时能防止表结构暴露，预防sql注入。在银行等金融行业，数据安全性高，程序逻辑变动少，常常使用存储过程来进行一部分业务逻辑处理；但在互联网行业，需求变化频繁，可扩展性要求高，系统移植概率高，往往少使用存储过程。</p>
+<h3 id="1-2-1-存储过程的优点"><a href="#1-2-1-存储过程的优点" class="headerlink" title="1.2.1 存储过程的优点"></a>1.2.1 存储过程的优点</h3><ul>
+<li><p>存储过程一次编译后，存储在数据库中，后续调用不需要再编译，执行速度快。</p>
+</li>
+<li><p>存储过程是在数据库内部进行数据处理，相较于外部程序调用接口（如Java 程序的 JDBC 接口）访问数据库内部数据，性能更优。</p>
+</li>
+</ul>
+<h3 id="1-2-2-存储过程的缺点"><a href="#1-2-2-存储过程的缺点" class="headerlink" title="1.2.2 存储过程的缺点"></a>1.2.2 存储过程的缺点</h3><ul>
+<li>存储过程依赖于数据库，例如Oracle的存储过程和MySQL的存储过程语法存在差异。若需要从Oracle迁移到MySQL，带来的改造量将是巨大的，这也是部分架构人员不推荐使用存储过程的原因。</li>
+</ul>
+<span id="more"></span>
+
+<ul>
+<li>存储过程将处理逻辑和数据库绑定，不利于系统解耦。</li>
+<li>存储过程代码管理困难，不利于团队协作开发；当数据库表变化时，可能会影响存储过程。</li>
+</ul>
+<h1 id="二、Spring-MySQL调用存储过程"><a href="#二、Spring-MySQL调用存储过程" class="headerlink" title="二、Spring+MySQL调用存储过程"></a>二、Spring+MySQL调用存储过程</h1><p>本节将使用SpringBoot+MySQL项目，演示存储过程的使用方法。</p>
+<h3 id="2-1-项目目标"><a href="#2-1-项目目标" class="headerlink" title="2.1 项目目标"></a>2.1 项目目标</h3><p>搭建一个基于SpringBoot的web系统，在浏览器发送请求后，java代码通过mybatis执行存储过程，将表MYTEST中的数据拷贝到MYTEST_TEMP。</p>
+<h3 id="2-2-创建表及测试数据"><a href="#2-2-创建表及测试数据" class="headerlink" title="2.2 创建表及测试数据"></a>2.2 创建表及测试数据</h3><p>(一)、建表MYTEST ：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">CREATE TABLE IF NOT EXISTS `MYTEST`(</span><br><span class="line">   `id` INT UNSIGNED AUTO_INCREMENT,</span><br><span class="line">   `title` VARCHAR(100) NOT NULL,</span><br><span class="line">   `author` VARCHAR(40) NOT NULL,</span><br><span class="line">   `submission_date` DATE,</span><br><span class="line">   PRIMARY KEY ( `id` )</span><br><span class="line">)ENGINE=InnoDB DEFAULT CHARSET=utf8;</span><br></pre></td></tr></table></figure>
+
+<p>（二）、创建表MYTEST_TEMP</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">CREATE TABLE IF NOT EXISTS `MYTEST_TEMP`(</span><br><span class="line">   `id` INT UNSIGNED AUTO_INCREMENT,</span><br><span class="line">   `author` VARCHAR(40) NOT NULL,</span><br><span class="line">   `submission_date` DATE,</span><br><span class="line">    `execute_date` DATE,</span><br><span class="line">   PRIMARY KEY ( `id` )</span><br><span class="line">)ENGINE=InnoDB DEFAULT CHARSET=utf8;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>（三）、在表MYTEST中插入数据</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">INSERT INTO MYTEST(title,author,submission_date)</span><br><span class="line">VALUES (&#x27;任务-1&#x27;,&#x27;展示&#x27;,&#x27;2017-01-02&#x27;),</span><br><span class="line">       (&#x27;任务-2&#x27;,&#x27;张二&#x27;,&#x27;2017-01-02&#x27;),</span><br><span class="line">       (&#x27;任务-3&#x27;,&#x27;张三&#x27;,&#x27;2022-03-24&#x27;),</span><br><span class="line">       (&#x27;任务-4&#x27;,&#x27;张四&#x27;,&#x27;2022-03-24&#x27;),</span><br><span class="line">       (&#x27;任务-5&#x27;,&#x27;张五&#x27;,&#x27;2022-03-24&#x27;)；</span><br><span class="line">       </span><br></pre></td></tr></table></figure>
+
+
+
+<p>（四）、编写存储过程 </p>
+<p>在Navicat中创建存储过程的方式请参考：<a href="https://www.cnblogs.com/lbxx/p/9322652.html">Navicat创建存储过程方法</a></p>
+<p>创建名为TEST的存储过程，入参为execDate。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">CREATE DEFINER=`root`@`%` PROCEDURE `TEST`(</span><br><span class="line">  IN execDate  VARCHAR(8)</span><br><span class="line">)</span><br><span class="line">BEGIN</span><br><span class="line"></span><br><span class="line"># 清空表</span><br><span class="line">TRUNCATE TABLE MYTEST_TEMP; </span><br><span class="line"></span><br><span class="line">INSERT INTO MYTEST_TEMP </span><br><span class="line">(</span><br><span class="line">id,</span><br><span class="line">author,</span><br><span class="line">submission_date,</span><br><span class="line">execute_date</span><br><span class="line">)</span><br><span class="line">SELECT </span><br><span class="line">id,author,submission_date,DATE_FORMAT(NOW(),&#x27;%Y-%m-%d 23:59:59&#x27;) AS execute_date</span><br><span class="line">FROM MYTEST</span><br><span class="line">WHERE submission_date = execDate;</span><br><span class="line">COMMIT;</span><br><span class="line"></span><br><span class="line">END</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h3 id="2-3-编写Springboot代码"><a href="#2-3-编写Springboot代码" class="headerlink" title="2.3 编写Springboot代码"></a>2.3 编写Springboot代码</h3><p>（一）、Controller层</p>
+<p>创建HelloController类</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@RestController</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HelloController</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">private</span> ProcedureService procedureService;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="meta">@RequestMapping(&quot;hello&quot;)</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">hello</span><span class="params">()</span></span>&#123;</span><br><span class="line"></span><br><span class="line">        procedureService.copyData(<span class="string">&quot;20220324&quot;</span>);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span>  <span class="string">&quot;hello world!&quot;</span>;</span><br><span class="line">    &#125;    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>（二）、Service层</p>
+<p>创建ProcedureService接口</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">ProcedureService</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">copyData</span><span class="params">(String date)</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>创建实现类</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Service</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ProcedureServiceImpl</span>  <span class="keyword">implements</span> <span class="title">ProcedureService</span></span>&#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">private</span> ProcedureDao procedureDao;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">copyData</span><span class="params">(String date)</span></span>&#123;</span><br><span class="line">        procedureDao.copyData(date);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>（三）、Dao层</p>
+<p>创建ProcedureDao接口</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">ProcedureDao</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">copyData</span><span class="params">(String date)</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>（四）、mapper.xml</p>
+<p>创建mapper映射文件</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;</span></span><br><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">mapper</span> <span class="meta-keyword">PUBLIC</span> <span class="meta-string">&quot;-//mybatis.org//DTD Mapper 3.0//EN&quot;</span> <span class="meta-string">&quot;http://mybatis.org/dtd/mybatis-3-mapper.dtd&quot;</span> &gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">mapper</span> <span class="attr">namespace</span>=<span class="string">&quot;com.example.demo.dao.ProcedureDao&quot;</span>&gt;</span></span><br><span class="line">    </span><br><span class="line">    <span class="tag">&lt;<span class="name">update</span> <span class="attr">id</span>=<span class="string">&quot;copyData&quot;</span> <span class="attr">parameterType</span>=<span class="string">&quot;java.lang.String&quot;</span>   <span class="attr">statementType</span>=<span class="string">&quot;CALLABLE&quot;</span>&gt;</span></span><br><span class="line">      CALL TEST(#&#123;execDate,mode=IN,jdbcType=VARCHAR&#125;)</span><br><span class="line">    <span class="tag">&lt;/<span class="name">update</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">mapper</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="2-4-查看执行结果"><a href="#2-4-查看执行结果" class="headerlink" title="2.4 查看执行结果"></a>2.4 查看执行结果</h3><p>在浏览器中请求<a href="http://localhost:8080/hello%EF%BC%8C%E6%9F%A5%E7%9C%8B%E8%BF%90%E8%A1%8C%E7%BB%93%E6%9E%9C%EF%BC%8C%E6%9C%80%E5%90%8E%E5%8F%AF%E4%BB%A5%E7%9C%8B%E5%88%B0%EF%BC%8CMYTEST%E8%A1%A8%E4%B8%AD%E6%95%B0%E6%8D%AE%E5%B7%B2%E5%AF%BC%E5%85%A5%E5%88%B0MYTEST_TEMP%E4%B8%AD%E3%80%82">http://localhost:8080/hello，查看运行结果，最后可以看到，MYTEST表中数据已导入到MYTEST_TEMP中。</a></p>
+<p><img src="/2022/03/25/20220325/pic.png" alt="image-20220325143819889"> </p>
+<h1 id="三、存储过程语法介绍"><a href="#三、存储过程语法介绍" class="headerlink" title="三、存储过程语法介绍"></a>三、存储过程语法介绍</h1><p>存储过程分为存储过程声明、执行过程、异常处理部分（可选）。</p>
+<h3 id="3-1-MySQL存储过程参数介绍"><a href="#3-1-MySQL存储过程参数介绍" class="headerlink" title="3.1 MySQL存储过程参数介绍"></a>3.1 MySQL存储过程参数介绍</h3><p>MySQL的存储过程的参数分为三类:IN、OUT、INOUT。</p>
+<ul>
+<li>IN 默认参数类型，代表入参</li>
+<li>OUT 出参，可将结果传会给调用的程序</li>
+<li>INOUT  即是入参也是出参</li>
+</ul>
+<h3 id="常用实例"><a href="#常用实例" class="headerlink" title="常用实例"></a>常用实例</h3><ul>
+<li>声明无参的存储过程</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">CREATE DEFINER = CURRENT_USER PROCEDURE `test`()  # 声明名称为test的存储过程</span><br><span class="line">BEGIN</span><br><span class="line">   # 存储过程执行部分</span><br><span class="line">	#Routine body goes here...</span><br><span class="line"></span><br><span class="line">END;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>声明入参为字符的存储过程</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">CREATE DEFINER=`root`@`%` PROCEDURE `TEST`(</span><br><span class="line">  IN execDate  VARCHAR(8)</span><br><span class="line">)</span><br><span class="line">BEGIN</span><br><span class="line"># 执行过程，它是业务逻辑处理部分</span><br><span class="line">END</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<ul>
+<li>调用存储过程</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># call 存储过程名称</span><br><span class="line">call procedure_name()</span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li>删除存储过程</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">drop procedure name</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="四、参考文档"><a href="#四、参考文档" class="headerlink" title="四、参考文档"></a>四、参考文档</h1><p>1、<a href="https://www.cnblogs.com/lbxx/p/9322652.html">Navicat创建存储过程方法</a></p>
+<p>2、<a href="https://www.zhihu.com/question/21345483">存储过程使用方法介绍</a></p>
+<p>3、<a href="https://www.runoob.com/w3cnote/mysql-stored-procedure.html">MySQL中的存储过程</a></p>
+<p>4、<a href="https://www.cnblogs.com/doudouxiaoye/p/5804467.html">存储过程的适用环境探讨</a></p>
+]]></content>
+      <categories>
+        <category>MySQL</category>
+      </categories>
+      <tags>
+        <tag>MySQL</tag>
+        <tag>存储过程</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Spring注解之@Profile</title>
     <url>/2021/10/31/Spring%E6%B3%A8%E8%A7%A3%E4%B9%8B@Profile/</url>
-    <content><![CDATA[<h2 id="Spring注解之-Profile"><a href="#Spring注解之-Profile" class="headerlink" title="Spring注解之@Profile"></a>Spring注解之@Profile</h2><p>spring的Profile是一种环境级别（dev、test、prod）的参数控制手段，只有当profile中的配置被激活时，才将对应的Bean注册到Spring容器中，常用来配置不通环境的数据库读取方式。一般，使用<strong>spring.profiles.active</strong> 设置当前启动环境。</p>
+    <content><![CDATA[<h2 id="Spring注解之-Profile"><a href="#Spring注解之-Profile" class="headerlink" title="Spring注解之@Profile"></a>Spring注解之@Profile</h2><p>Spring的Profile是一种环境级别（dev、test、prod）的参数控制手段，只有当profile中的配置被激活时，才将对应的Bean注册到Spring容器中，常用来配置不通环境的数据库读取方式。一般，使用<strong>spring.profiles.active</strong> 设置当前启动环境。</p>
 <span id="more"></span>
 
 
@@ -348,6 +540,36 @@
       <tags>
         <tag>Spring</tag>
         <tag>注解</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Git指令</title>
+    <url>/2022/02/10/git%E6%8C%87%E4%BB%A4/</url>
+    <content><![CDATA[<ul>
+<li>查看git版本</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git --version</span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li>更新git版本</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git update-git-for-windows</span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li>解决Failed to connect to github.com port 443: Timed out</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global http.proxy http://127.0.0.1:1080</span><br><span class="line"></span><br><span class="line">git config --global https.proxy http://127.0.0.1:1080</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>Git</category>
+      </categories>
+      <tags>
+        <tag>Git</tag>
+        <tag>笔记</tag>
       </tags>
   </entry>
 </search>
